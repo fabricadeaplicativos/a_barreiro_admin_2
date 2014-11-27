@@ -1,0 +1,36 @@
+<ion-view title="Enviar promoção">
+  <ion-nav-buttons side="left">
+    <button menu-toggle="left"class="button button-icon icon ion-navicon"></button>
+  </ion-nav-buttons>
+
+  <ion-content class="has-header padding">
+    <h1>Enviar promoção</h1>
+    <p>Crie uma nova promoção ou envie uma promoção já definida para os seus clientes</p>
+
+    <button ng-click="novaPromocao()" class="button icon button-block ion-plus-round button-positive">
+	  Criar nova promoção
+	</button>
+
+	<ul class="list">
+
+  <li class="item" ng-repeat="promocao in promocoes">
+     <h2>{{promocao.titulo}}</h2>
+     <p>{{promocao.descricao}}<br>
+     <!--  {{promocao.data}}  |  {{promocao.hora}} -->
+    </p>
+    <button class="button button-stable" ng-click="enviarPromocao(promocao)">enviar promoção</button>
+<!--      <label class="toggle toggle-positive">
+       <input type="checkbox" ng-model="promocao.estaAtivo">
+       <div class="track">
+         <div class="handle"></div>
+       </div>
+     </label> -->
+  </li>
+
+  
+
+</ul>
+
+
+  </ion-content>
+</ion-view>
